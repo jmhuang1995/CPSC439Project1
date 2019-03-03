@@ -1,0 +1,19 @@
+
+/* grid and square styles */
+.grid {
+  display: inline-grid;
+  transform: rotateX(180deg) rotate(270deg);
+  padding: 5px;
+  border: 1px #e1e4e8 solid;
+}
+.squares {
+  display: grid;
+  --square-size: 4px;
+  grid-gap: 0.5px;
+  grid-template-rows: repeat(400, var(--square-size));
+  grid-auto-flow: column;
+  grid-auto-columns: var(--square-size);
+}
+
+.squares li{ background-color: #ebedf0; }/*blank*/
+.squares li[data-level="1"] { background-color: #000000; }/*black*/
